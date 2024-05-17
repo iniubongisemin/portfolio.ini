@@ -10,6 +10,10 @@
     #projects {
       height: fit-content;
     }
+    .exp_edu {
+      padding-bottom: 100px;
+      display: flex;
+  }
   }
   
   @media screen and (max-width: 1200px) {
@@ -65,10 +69,22 @@
       height: fit-content;
       margin-bottom: 2rem;
     }
-    .about-containers {
-        /* flex-wrap: wrap; */
-        display: block;
+
+    .about-details-container {
+      row-gap: 500px;
     }
+
+    .about-containers {
+      /* flex-wrap: wrap; */
+        /* column-gap: 500px; */
+        display: block;
+        /* gap: 10px; */
+    }
+
+    .details-container {
+      padding-bottom: 100px;
+    }
+
     .exp_edu {
         padding-bottom: 100px;
     }
