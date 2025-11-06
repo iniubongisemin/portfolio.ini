@@ -75,10 +75,8 @@
     }
 
     .about-containers {
-      /* flex-wrap: wrap; */
-        /* column-gap: 500px; */
-        display: block;
-        /* gap: 10px; */
+      display: block;
+      flex-direction: column; 
     }
 
     .details-container {
