@@ -213,8 +213,15 @@ section {
 
 /* ICONS */
 
+
 .icon {
   cursor: pointer;
+  height: 2rem;
+}
+
+.stack-icon{
+  display: flex;
+  align-items: center;
   height: 2rem;
 }
 
@@ -286,6 +293,8 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
+  /* display: block; */
+  flex-direction: column; 
 }
 
 .about-pic {
