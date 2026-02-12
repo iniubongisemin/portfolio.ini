@@ -55,6 +55,9 @@
       display: block;
       flex-direction: column; 
     }
+    #projects .experience-details-container {
+      margin-bottom: 2.5rem;
+    }
   }
   
   @media screen and (max-width: 600px) {
@@ -127,5 +130,8 @@
     }
     .text-container {
       text-align: justify;
+    }
+    #projects .experience-details-container {
+      margin-bottom: 2rem;
     }
   }
