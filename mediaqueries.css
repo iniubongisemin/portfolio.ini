@@ -113,6 +113,7 @@
     .contact-info-upper-container,
     .btn-container {
       display: flex;
+      gap: 4px;
     }
     .contact-info-container {
       margin: 0;
