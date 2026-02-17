@@ -359,12 +359,6 @@ section {
   flex-direction: column;
 }
 
-/* .exp_edu {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-} */
-
 .article-container ul {
   display: flex;
   text-align: initial;
@@ -430,6 +424,11 @@ article .icon {
 
 .project-btn {
   color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+.project-btn-two {
+  color: rgb(163, 163, 163);
   border-color: rgb(163, 163, 163);
 }
 
