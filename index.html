@@ -45,31 +45,34 @@
       <div class="section__text">
         <p class="section__text__p1">Hi there 👋 <br/> I'm</p>
         <h1 class="title">Ini-ubong Isemin</h1>
-        <p class="section__text__p2">A backend software engineer sold out to building high performance backend infrastructure</p>
+        <p class="section__text__p2">A Backend Software Engineer sold out to building high performance backend infrastructure</p>
         <div class="btn-container">
-          <button
+          <a
             class="pdf-btn btn-color-2"
-            onclick="window.open('./assets/INI-UBONG_ISEMIN_ENYINNA_RESUME.pdf')"
+            href="https://drive.google.com/file/d/1rB9Rn61cy7-YtsTwpRI4MFzh7RcI4ndy/view?usp=drive_link"
+            target="_blank" rel="noopener noreferrer"
           >
             Get my Resume
-          </button>
+          </a>
           <button class="pdf-btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/iniubongisemin/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/iniubongisemin'"
-          />
+          <a 
+          href="https://www.linkedin.com/in/iniubongisemin/" 
+          target="_blank" rel="noopener noreferrer">
+            <img src="./assets/linkedin.png" 
+            alt="My LinkedIn profile" 
+            class="icon"/>
+          </a>
+          <a 
+          href="https://www.github.com/iniubongisemin" 
+          target="_blank" rel="noopener noreferrer">
+            <img src="./assets/github.png" 
+            alt="My Github Account" 
+            class="icon"/>
+          </a>
         </div>
       </div>
     </section>
@@ -222,7 +225,7 @@
                 <a href="https://liberty-paybox-dashboard-crm.vercel.app/login" target="_blank" rel="noopener noreferrer">
                     <img
                       src="./assets/paybox360_crm.png"
-                      alt="Project 1"
+                      alt="PayBox360"
                       class="project-img"
                     />
                 </a>
@@ -230,6 +233,54 @@
                   <button
                     class="btn btn-color-2 project-btn"
                     onclick="location.href='https://www.home.paybox360.com/'" target='_blank'
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class="experience-details-container">
+        <h1 class="title">Winwise Admin Dashboard Optimization</h1>
+          <!-- <div class="about-containers"> -->
+          <div class="details-container color-container">
+            <div class="article-container">
+                <a href="https://www.wisewinn.com/" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="./assets/wisewinn.png"
+                      alt="Winwise Betting Platform"
+                      class="project-img"
+                    />
+                </a>
+                <div class="btn-container overlay-btn">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://www.wisewinn.com/'" target='_blank'
+                  >
+                    Live Demo
+                  </button>
+                </div>
+            </div>
+          </div>
+      </div>
+      
+      <div class="experience-details-container">
+        <h1 class="title">Seeds and Pennies Loans Integration</h1>
+          <!-- <div class="about-containers"> -->
+          <div class="details-container color-container">
+            <div class="article-container">
+                <a href="https://www.seedsandpennies.com/" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="./assets/seedsandpennies.png"
+                      alt="Seeds and Pennies"
+                      class="project-img"
+                    />
+                </a>
+                <div class="btn-container overlay-btn">
+                  <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="location.href='https://www.seedsandpennies.com/'" target='_blank'
                   >
                     Live Demo
                   </button>
@@ -295,8 +346,11 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2026 Ini-ubong Isemin. All Rights Reserved.</p>
+      <p>Copyright &#169; <span id="year"></span> Ini-ubong Isemin. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
