@@ -1,153 +1,393 @@
+/* ═══════════════════════════════════════════
+   BREAKPOINT: ≤ 1400px  (large tablets / small laptops)
+═══════════════════════════════════════════ */
+
 @media screen and (max-width: 1400px) {
-    #profile {
-      height: 83vh;
-      margin-bottom: 6rem;
-    }
-    .about-containers {
-      flex-wrap: wrap;
-      display: block;
-      flex-direction: column; 
-    }
-    #contact,
-    #projects {
-      height: fit-content;
-    }
-    .exp_edu {
-      padding-bottom: 100px;
-      display: flex;
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
   }
+
+  .about-containers {
+    flex-wrap: wrap;
   }
-  
-  @media screen and (max-width: 1200px) {
-    #desktop-nav {
-      display: none;
-    }
-    #hamburger-nav {
-      display: flex;
-      position: relative;
-      left: 1rem;
-    }
-    #experience,
-    .experience-details-container {
-      margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-      display: block;
-    }
-    .arrow {
-      display: none;
-    }
-    section,
-    .section-container {
-      height: fit-content;
-    }
-    section {
-      margin: 0 5%;
-    }
-    .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;
-    }
-    .about-containers {
-      margin-top: 0;
-      display: block;
-      flex-direction: column; 
-    }
-    #projects .experience-details-container {
-      margin-bottom: 2.5rem;
-    }
+
+  #contact,
+  #projects {
+    height: fit-content;
   }
-  
-  @media screen and (max-width: 600px) {
-    #contact,
-    footer {
-      height: 40vh;
-    }
-    #profile {
-      height: 74vh;
-      margin-bottom: 0;
-    }
-    article {
-      font-size: 1rem;
-    }
-    footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-    }
 
-    .about-details-container {
-      row-gap: 500px;
-    }
-
-    .about-containers {
-      display: flex;
-      flex-direction: column; 
-    }
-
-    .details-container {
-      padding-bottom: 100px;
-    }
-
-    .exp_edu {
-        padding-bottom: 100px;
-    }
-
-    .article-container {
-      width: 100%;
-      max-width: 100%;
-    }
-    
-    .project-img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 31px;
-    }
-    
-    .details-container.color-container {
-      padding: 0;
-    }
-
-    .contact-info-upper-container,
-    .btn-container {
-      display: flex;
-      gap: 4px;
-    }
-    .contact-info-container {
-      margin: 0;
-    }
-    .contact-info-container p,
-    .nav-links li a {
-      font-size: 1rem;
-    }
-    .experience-sub-title {
-      font-size: 1.25rem;
-    }
-    .logo {
-      font-size: 1.5rem;
-    }
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;
-    }
-    .section__pic-container {
-      width: 46vw;
-      height: 46vw;
-      justify-content: center;
-    }
-    .section__text__p2 {
-      font-size: 1.25rem;
-    }
-    .title {
-      font-size: 1.2rem;
-    }
-    .text-container {
-      text-align: center;
-    }
-    #projects .experience-details-container {
-      margin-bottom: 2rem;
-    }
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  .stack-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   BREAKPOINT: ≤ 1200px  (tablets / hamburger kicks in)
+═══════════════════════════════════════════ */
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    position: relative;
+    left: 1rem;
+  }
+
+  /* --- Profile --- */
+  #profile,
+  .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+
+  /* --- About --- */
+  .about-section-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-containers {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .about-details-container {
+    width: 100%;
+  }
+
+  /* --- Tech Stack --- */
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* --- Work Experience --- */
+  .work-scenario {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Recommendations --- */
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Projects --- */
+  #projects .experience-details-container {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   BREAKPOINT: ≤ 900px  (mid-range phones / small tablets)
+═══════════════════════════════════════════ */
+
+@media screen and (max-width: 900px) {
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .work-date {
+    align-self: flex-start;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   BREAKPOINT: ≤ 600px  (mobile phones)
+═══════════════════════════════════════════ */
+
+@media screen and (max-width: 600px) {
+  /* --- Nav --- */
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  /* --- Footer nav --- */
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  /* --- Profile / Hero --- */
+  #profile {
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .section__pic-container {
+    width: 46vw;
+    height: 46vw;
+    margin: 0 auto;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .hero-summary {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .metric-badge {
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+    padding: 0.6rem 1rem;
+  }
+
+  .metric-label {
+    font-size: 0.72rem;
+  }
+
+  /* --- About --- */
+  .about-section-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-containers {
+    flex-direction: column;
+  }
+
+  .details-container {
+    padding-bottom: 1.5rem;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  /* --- Tech Stack --- */
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-sub-title {
+    font-size: 1.1rem;
+  }
+
+  /* --- Work Experience --- */
+  .work-card {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border-left-width: 3px;
+  }
+
+  .work-role {
+    font-size: 1.05rem;
+  }
+
+  .work-type {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+  }
+
+  .work-scenario {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .scenario-block {
+    padding: 1rem;
+  }
+
+  .scenario-block p,
+  .work-list li {
+    font-size: 0.88rem;
+  }
+
+  .work-tags {
+    gap: 0.4rem;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .metric-highlight {
+    font-size: 0.82rem;
+    flex-wrap: wrap;
+  }
+
+  .metric-number-sm {
+    font-size: 1rem;
+  }
+
+  /* --- Projects --- */
+  article {
+    font-size: 1rem;
+  }
+
+  .article-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .project-section-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.88rem;
+  }
+
+  .details-container.color-container {
+    padding: 0;
+  }
+
+  #projects .experience-details-container {
+    margin-bottom: 2rem;
+  }
+
+  /* --- Recommendations --- */
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recommendation-card {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+  }
+
+  .quote-text {
+    font-size: 0.875rem;
+  }
+
+  .reviewer-avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 0.78rem;
+  }
+
+  .reviewer-name {
+    font-size: 0.88rem;
+  }
+
+  .reviewer-title {
+    font-size: 0.7rem;
+  }
+
+  .reviewer-rel {
+    font-size: 0.67rem;
+  }
+
+  /* --- Contact --- */
+  #contact,
+  footer {
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
+
+  .contact-info-upper-container,
+  .btn-container {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   BREAKPOINT: ≤ 400px  (very small phones)
+═══════════════════════════════════════════ */
+
+@media screen and (max-width: 400px) {
+  section {
+    margin: 0 4%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+
+  .work-role {
+    font-size: 0.95rem;
+  }
+
+  .recommendation-card {
+    padding: 1rem;
+  }
+
+  .pdf-btn {
+    width: 9rem;
+    font-size: 0.85rem;
+  }
+}

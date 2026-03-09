@@ -1,10 +1,13 @@
-/* GENERAL */
+/* ═══════════════════════════════════════════
+   GENERAL
+═══════════════════════════════════════════ */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -26,25 +29,23 @@ a,
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
-
-
-.nav-links {
-    display: flex;
-    justify-items: flex-end;
-}
+/* ═══════════════════════════════════════════
+   DESKTOP NAV
+═══════════════════════════════════════════ */
 
 nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 17vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 17vh;
 }
 
 .nav-links {
-  gap: 2rem;
+  display: flex;
+  gap: 1.5rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  justify-items: flex-end;
 }
 
 a {
@@ -68,7 +69,9 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
+/* ═══════════════════════════════════════════
+   HAMBURGER MENU
+═══════════════════════════════════════════ */
 
 #hamburger-nav {
   display: none;
@@ -94,7 +97,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -105,17 +108,20 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 0.5rem;
 }
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 10px 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -123,7 +129,7 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -140,46 +146,45 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
-}
-
-.hamburger-icon span:first-child {
   opacity: 1;
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-/* SECTIONS */
+/* ═══════════════════════════════════════════
+   SECTIONS — BASE
+═══════════════════════════════════════════ */
 
 section {
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
-  box-sizing: border-box;
   min-height: fit-content;
 }
 
 .section-container {
-  display: inline-block;
+  display: flex;
+  gap: 4rem;
+  height: 80%;
 }
 
-/* PROFILE SECTION */
+/* ═══════════════════════════════════════════
+   PROFILE / HERO
+═══════════════════════════════════════════ */
 
 #profile {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5rem;
   height: 80vh;
 }
 
 .section__pic-container {
   display: block;
-  width: 300px;
-  height: 300px;
-  margin: auto 0;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .section__text {
@@ -197,12 +202,46 @@ section {
 
 .section__text__p2 {
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+}
+
+/* Hero summary paragraph */
+.hero-summary {
+  font-size: 1rem;
+  font-weight: 400 !important;
+  color: rgb(85, 85, 85);
+  max-width: 480px;
+  margin: 0.75rem auto 1.25rem;
+  line-height: 1.7;
+}
+
+/* 99% metric badge in hero */
+.metric-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgb(53, 53, 53);
+  color: white;
+  border-radius: 2rem;
+  padding: 0.4rem 1.2rem;
+  margin: 0 auto 1.25rem;
+}
+
+.metric-number {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(200, 200, 200);
 }
 
 #socials-container {
@@ -212,21 +251,25 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
-
+/* ═══════════════════════════════════════════
+   ICONS
+═══════════════════════════════════════════ */
 
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-.stack-icon{
+.stack-icon {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   height: 2rem;
 }
 
-/* BUTTONS */
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
 
 .btn-container {
   display: flex;
@@ -278,32 +321,35 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
-/* ABOUT SECTION */
+/* ═══════════════════════════════════════════
+   ABOUT SECTION
+═══════════════════════════════════════════ */
 
 #about {
   position: relative;
+  height: fit-content;
+  padding-bottom: 5rem;
 }
 
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
+.about-section-grid {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
   margin-top: 2rem;
 }
 
 .about-details-container {
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
-.about-containers,
-.about-details-container {
+.about-containers {
   display: flex;
-  /* display: block; */
-  flex-direction: column; 
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .about-pic {
@@ -321,36 +367,38 @@ section {
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: rgb(163, 163, 163) 0.1rem solid;
   text-align: center;
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
+.text-container {
+  flex: 1;
+  align-self: center;
 }
 
-.section__pic-container {
-  display: block;
-  width: 400px;
-  height: 400px;
-  margin: auto 0;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* EXPERIENCE SECTION */
+/* ═══════════════════════════════════════════
+   TECH STACK SECTION
+═══════════════════════════════════════════ */
 
 #experience {
   position: relative;
+  height: fit-content;
+  padding-bottom: 5rem;
 }
 
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
 .experience-details-container {
@@ -364,27 +412,189 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  gap: 1.5rem;
+  justify-content: center;
   list-style-type: none;
 }
 
 li {
   display: block;
-  margin-left: 2rem;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  width: auto;
 }
 
 article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
+/* ═══════════════════════════════════════════
+   WORK EXPERIENCE SECTION
+═══════════════════════════════════════════ */
+
+#work {
+  position: relative;
+  height: fit-content;
+  padding-bottom: 5rem;
+}
+
+.work-card {
+  background: white;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-left: 4px solid rgb(53, 53, 53);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.work-header-text {
+  flex: 1;
+}
+
+.work-role {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: rgb(30, 30, 30);
+  margin-bottom: 0.25rem;
+}
+
+.work-type {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgb(120, 120, 120);
+}
+
+.work-company {
+  font-size: 1rem;
+  color: rgb(85, 85, 85);
+}
+
+.work-company a {
+  font-weight: 600;
+  color: rgb(53, 53, 53);
+}
+
+.work-company a:hover {
+  color: black;
+}
+
+.work-date {
+  font-size: 0.9rem;
+  color: rgb(120, 120, 120);
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.work-scenario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scenario-block {
+  background: rgb(250, 250, 250);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.scenario-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgb(53, 53, 53);
+  margin-bottom: 0.6rem;
+}
+
+.scenario-block p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.work-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.work-list li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgb(85, 85, 85);
+  padding-left: 1rem;
+  border-left: 2px solid rgb(210, 210, 210);
+  width: 100%;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: rgb(245, 245, 245);
+  border: 0.1rem solid rgb(210, 210, 210);
+  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  color: rgb(60, 60, 60);
+  font-weight: 500;
+}
+
+.metric-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgb(53, 53, 53);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+}
+
+.metric-number-sm {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* ═══════════════════════════════════════════
+   PROJECTS SECTION
+═══════════════════════════════════════════ */
 
 #projects {
   position: relative;
+  height: fit-content;
+  padding-bottom: 5rem;
+}
+
+.project-section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(30, 30, 30);
+  margin-bottom: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: rgb(85, 85, 85);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  max-width: 720px;
 }
 
 .color-container {
@@ -392,12 +602,10 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 
-/* Make project image fill its container */
 .article-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  /* Allow container height to follow the image's intrinsic height */
 }
 
 .project-img {
@@ -407,7 +615,6 @@ article .icon {
   display: block;
 }
 
-/* Button over image */
 .overlay-btn {
   position: absolute;
   bottom: 1rem;
@@ -432,12 +639,109 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* Space out project items inside the projects section */
 #projects .experience-details-container {
   margin-bottom: 2.5rem;
 }
 
-/* CONTACT */
+/* ═══════════════════════════════════════════
+   RECOMMENDATIONS SECTION
+═══════════════════════════════════════════ */
+
+#recommendations {
+  position: relative;
+  height: fit-content;
+  padding-bottom: 5rem;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  align-items: start;
+}
+
+.recommendation-card {
+  background: white;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: box-shadow 300ms ease;
+}
+
+.recommendation-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.quote-mark {
+  font-size: 4rem;
+  line-height: 0.8;
+  color: rgb(210, 210, 210);
+  font-family: Georgia, serif;
+  font-weight: 700;
+  margin-bottom: -0.5rem;
+}
+
+.quote-text {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: rgb(85, 85, 85);
+  flex: 1;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-top: 1rem;
+  border-top: 0.1rem solid rgb(230, 230, 230);
+}
+
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: rgb(53, 53, 53);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.reviewer-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgb(30, 30, 30) !important;
+}
+
+.reviewer-title {
+  font-size: 0.75rem;
+  color: rgb(120, 120, 120) !important;
+  line-height: 1.4;
+}
+
+.reviewer-rel {
+  font-size: 0.72rem;
+  color: rgb(160, 160, 160) !important;
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════
+   CONTACT SECTION
+═══════════════════════════════════════════ */
 
 #contact {
   display: flex;
@@ -450,9 +754,8 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  border: rgb(163, 163, 163) 0.1rem solid;
+  background: rgb(250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
 }
@@ -477,7 +780,9 @@ article .icon {
   height: 2.5rem;
 }
 
-/* FOOTER SECTION */
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
 
 footer {
   height: 26vh;

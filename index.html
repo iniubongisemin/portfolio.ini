@@ -4,27 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ini-ubong Isemin</title>
+    <title>Ini-ubong Isemin — Backend Engineer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- DESKTOP NAV -->
     <nav id="desktop-nav">
-        <div class="logo">Ini-ubong Isemin</div>
-        <div>
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Technologies</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+      <div class="logo">Ini-ubong Isemin</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Tech Stack</a></li>
+          <li><a href="#work">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#recommendations">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <!-- HAMBURGER NAV -->
     <nav id="hamburger-nav">
-        <div class="logo">Ini-ubong Isemin</div>
-        <div class="hamburger-menu">
+      <div class="logo">Ini-ubong Isemin</div>
+      <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -32,25 +37,43 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Technologies</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Tech Stack</a></li>
+          <li><a href="#work" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#recommendations" onclick="toggleMenu()">Reviews</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
     <section id="profile">
-      <!-- <div class="section__pic-container"> -->
-        <img src="./assets/inie.png" alt="Ini-ubong Isemin's profile picture" class="section__pic-container"/>
-      <!-- </div> -->
+      <img
+        src="./assets/inie.png"
+        alt="Ini-ubong Isemin's profile picture"
+        class="section__pic-container"
+      />
       <div class="section__text">
-        <p class="section__text__p1">Hi there 👋 <br/> I'm</p>
+        <p class="section__text__p1">Hi there 👋 &nbsp;I'm</p>
         <h1 class="title">Ini-ubong Isemin</h1>
-        <p class="section__text__p2">A Backend Software Engineer sold out to building high performance backend infrastructure</p>
+        <p class="section__text__p2">Backend Software Engineer</p>
+        <p class="hero-summary">
+          I build the backend infrastructure that makes things work at scale —
+          APIs, databases, caches, and automation systems engineered to perform
+          under real production pressure.
+        </p>
+        <div class="metric-badge">
+          <span class="metric-number">99%</span>
+          <span class="metric-label">production load-time improvement delivered</span>
+        </div>
         <div class="btn-container">
           <a
             class="pdf-btn btn-color-2"
             href="https://drive.google.com/file/d/1rB9Rn61cy7-YtsTwpRI4MFzh7RcI4ndy/view?usp=drive_link"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Get my Resume
           </a>
@@ -59,63 +82,69 @@
           </button>
         </div>
         <div id="socials-container">
-          <a 
-          href="https://www.linkedin.com/in/iniubongisemin/" 
-          target="_blank" rel="noopener noreferrer">
-            <img src="./assets/linkedin.png" 
-            alt="My LinkedIn profile" 
-            class="icon"/>
+          <a
+            href="https://www.linkedin.com/in/iniubongisemin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
           </a>
-          <a 
-          href="https://www.github.com/iniubongisemin" 
-          target="_blank" rel="noopener noreferrer">
-            <img src="./assets/github.png" 
-            alt="My Github Account" 
-            class="icon"/>
+          <a
+            href="https://www.github.com/iniubongisemin"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./assets/github.png" alt="My Github Account" class="icon" />
           </a>
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
     <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <!-- <div class="exp_edu"> -->
-          <div class="section-container">
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img
-                            src="./assets/education.png"
-                            alt="Education icon"
-                            class="icon"
-                            />
-                            <h3>Experience</h3>
-                            <p>I'm writing my story one project at a time </p>
-                            <p>⦿ Fullstack Developer @<a href="https://mentorled.com/" target="_blank">Mentorled</a> | 2024</p>
-                            <br>
-                            <p>⦿ Backend Developer @<a href="https://www.linkedin.com/company/liberty-assured-limited/" target="_blank">Liberty Assured Ltd</a> | 2025</p>
-                            <br>
-                            <p>⦿ Technical Support Developer (Backend) @<a href="https://certn.co/" target="_blank">Certn</a> | 2026</p>
-                          </div>
-                          <div class="details-container">
-                            <img
-                            src="./assets/experience.png"
-                            alt="Technologies icon"
-                            class="icon"
-                            />
-                            <h3>Education</h3>
-                            <p>⦿ B.Eng(Hons) Agric Engineering | Grade: 2.1 😎 | 2021</p> 
-                            <br>
-                            <p>⦿ Fullstack Web Development Programme @<a href="https://univelcity.com" target="_blank">Univelcity</a> | MVP in my cohort 😎 | 2024</p>
-                        </div>
-                    </div>
-                </div>  
-          <div class="text-container">
-            <p>
-              The world of software development is my playground, and VS Code is my digital brush. I use Python to paint code that brings logic and functionality to life. I'm looking for new challenges and opportunities to create software masterpieces.
-            </p>
+      <p class="section__text__p1">The Story So Far</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container about-section-grid">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+              <h3>Experience</h3>
+              <p>⦿ Fullstack Developer @<a href="https://mentorled.com/" target="_blank">Mentorled</a> | 2024</p>
+              <br />
+              <p>⦿ Backend Developer @<a href="https://www.linkedin.com/company/liberty-assured-limited/" target="_blank">Liberty Assured Ltd</a> | 2024–2026</p>
+              <br />
+              <p>⦿ Technical Support Developer @<a href="https://certn.co/" target="_blank">Certn</a> | 2026</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="Education icon" class="icon" />
+              <h3>Education</h3>
+              <p>⦿ B.Eng Agric &amp; Bio-resource Engineering | ATBU | 2021</p>
+              <br />
+              <p>⦿ Fullstack Web Dev @<a href="https://univelcity.com" target="_blank">Univelcity</a> | MVP in cohort | 2024</p>
+              <br />
+              <p>⦿ Backend Web Dev @<a href="https://univelcity.com" target="_blank">Univelcity</a> | 2025</p>
+            </div>
           </div>
-        <!-- </div> -->
+        </div>
+        <div class="text-container">
+          <p>
+            My background in engineering gave me a foundation in systems thinking —
+            understanding how things connect, break, and can be made better.
+            I applied that lens to software, and I've spent the years since
+            building backend systems that are reliable, efficient, and ready
+            for production pressure.
+          </p>
+          <br />
+          <p>
+            I've led teams, shipped features under deadline, diagnosed production
+            incidents in real-time, and delivered measurable performance gains.
+            I write code that solves real problems — not elegant code for its own
+            sake, but code that works where it matters.
+          </p>
+        </div>
       </div>
       <img
         src="./assets/arrow.png"
@@ -124,67 +153,282 @@
         onclick="location.href='./#experience'"
       />
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         TECH STACK
+    ═══════════════════════════════════════════ -->
     <section id="experience">
-      <p class="section__text__p1">Explore My</p>
+      <p class="section__text__p1">What I Work With</p>
       <h1 class="title">Tech Stack</h1>
+      <div class="stack-grid">
+
         <div class="details-container">
-            <h2 class="experience-sub-title">Backend Technologies</h2>
-            <div class="article-container">
-                <ul>
-                    <li>
-                        <div class="stack-icon">
-                            <img
-                              src="./assets/checkmark.png"
-                              alt="Technologies icon"
-                              class="icon"
-                            />
-                            <h3>Python</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="stack-icon">
-                            <img
-                              src="./assets/checkmark.png"
-                              alt="Technologies icon"
-                              class="icon"
-                            />
-                            <h3>Django</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="stack-icon">
-                            <img
-                              src="./assets/checkmark.png"
-                              alt="Technologies icon"
-                              class="icon"
-                            />
-                            <h3>PostgreSQL</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="stack-icon">
-                            <img
-                              src="./assets/checkmark.png"
-                              alt="Technologies icon"
-                              class="icon"
-                            />
-                            <h3>NLTK</h3>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="stack-icon">
-                            <img
-                              src="./assets/checkmark.png"
-                              alt="Technologies icon"
-                              class="icon"
-                            />
-                            <h3>Docker</h3>
-                        </div>
-                    </li>
-                </ul>
+          <h2 class="experience-sub-title">Backend Core</h2>
+          <div class="article-container">
+            <ul>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Python</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Django</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>REST APIs</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Celery</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>NLTK</h3></div></li>
+            </ul>
           </div>
         </div>
-      <!-- </div> -->
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">Data &amp; Caching</h2>
+          <div class="article-container">
+            <ul>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>PostgreSQL</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Redis</h3></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">DevOps &amp; Automation</h2>
+          <div class="article-container">
+            <ul>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Docker</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>n8n</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Git</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Vercel</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Railway</h3></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tooling</h2>
+          <div class="article-container">
+            <ul>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Postman</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Swagger</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Sentry</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Jira</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Zendesk</h3></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">AI-Assisted Dev</h2>
+          <div class="article-container">
+            <ul>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Claude AI</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Amazon Q</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Copilot</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>Cursor</h3></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend</h2>
+          <div class="article-container">
+            <ul>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>React</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>HTML5</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>CSS3</h3></div></li>
+              <li><div class="stack-icon"><img src="./assets/checkmark.png" alt="" class="icon" /><h3>JavaScript</h3></div></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#work'"
+      />
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WORK EXPERIENCE — STORYTELLING
+    ═══════════════════════════════════════════ -->
+    <section id="work">
+      <p class="section__text__p1">How I've Made Impact</p>
+      <h1 class="title">Work Experience</h1>
+
+      <!-- Certn -->
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-header-text">
+            <h2 class="work-role">
+              Technical Support Developer
+              <span class="work-type">(Backend · Contract)</span>
+            </h2>
+            <p class="work-company">
+              <a href="https://certn.co/" target="_blank" rel="noopener noreferrer">Certn</a>
+              &mdash; Canada (Remote)
+            </p>
+          </div>
+          <span class="work-date">Jan 2026</span>
+        </div>
+        <div class="work-scenario">
+          <div class="scenario-block">
+            <span class="scenario-label">The Challenge</span>
+            <p>
+              Production issues were reaching support that required backend-level
+              diagnosis — not just surface-level troubleshooting. Escalations needed
+              fast, accurate resolution with no margin for guesswork.
+            </p>
+          </div>
+          <div class="scenario-block">
+            <span class="scenario-label">What I Did</span>
+            <p>
+              Collaborated directly with internal engineering teams to diagnose and
+              resolve backend-escalated issues. Leveraged API diagnostics,
+              PostgreSQL querying, and log analysis to trace root causes and deliver
+              fixes — managing resolution workflows through Zendesk and Jira.
+            </p>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">API Diagnostics</span>
+          <span class="tag">Log Analysis</span>
+          <span class="tag">Zendesk</span>
+          <span class="tag">Jira</span>
+        </div>
+      </div>
+
+      <!-- Liberty Assured -->
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-header-text">
+            <h2 class="work-role">Backend Developer</h2>
+            <p class="work-company">
+              <a href="https://www.linkedin.com/company/liberty-assured-limited/" target="_blank" rel="noopener noreferrer">Liberty Assured Ltd</a>
+              &mdash; Lagos, Nigeria (Hybrid)
+            </p>
+          </div>
+          <span class="work-date">Jul 2024 – Jan 2026</span>
+        </div>
+        <div class="work-scenario">
+          <div class="scenario-block">
+            <span class="scenario-label">The Challenge</span>
+            <p>
+              A growing fintech with multiple live products and mounting backend debt:
+              a CRM that didn't exist yet, an admin dashboard so slow it was nearly
+              unusable, manual customer service eating up team bandwidth, and no
+              internal email infrastructure.
+            </p>
+          </div>
+          <div class="scenario-block">
+            <span class="scenario-label">What I Built</span>
+            <ul class="work-list">
+              <li>
+                <strong>PayBox360 CRM</strong> — Engineered the full lead management
+                pipeline: creating leads, building pipelines, managing stages, and a
+                round-robin scheduling system integrating <em>Zoom</em>,
+                <em>Google Calendar</em>, and <em>Calendly</em> APIs so sales
+                officers never missed a booked meeting.
+              </li>
+              <li>
+                <strong>In-house Email Infrastructure</strong> — Designed and built
+                an internal email system from scratch — sending, retrieving, saving,
+                deleting, and drafts — all exposed via clean REST endpoints.
+              </li>
+              <li>
+                <strong>WinWinn Dashboard Optimisation</strong> — The admin dashboard
+                was loading in seconds when it should have loaded in milliseconds.
+                I profiled the bottleneck, implemented database indexing, layered
+                Redis caching on hot queries, and offloaded heavy computation to
+                Celery. Load time dropped by <strong>99%</strong>.
+              </li>
+              <li>
+                <strong>Loan Default Tracking</strong> — Integrated third-party APIs
+                to automatically detect and flag borrowers defaulting on Seeds &amp;
+                Pennies loan repayments, eliminating manual monitoring entirely.
+              </li>
+              <li>
+                <strong>Customer Service Automation</strong> — Built backend endpoints
+                connecting n8n workflow automations with Freshchat, streamlining the
+                entire customer service operation.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Celery</span>
+          <span class="tag">n8n</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Zoom API</span>
+          <span class="tag">Google Calendar</span>
+          <span class="tag">Calendly</span>
+        </div>
+        <div class="metric-highlight">
+          <span class="metric-number-sm">99%</span> load-time improvement on WinWinn admin dashboard
+        </div>
+      </div>
+
+      <!-- Mentorled -->
+      <div class="work-card">
+        <div class="work-header">
+          <div class="work-header-text">
+            <h2 class="work-role">Fullstack Developer</h2>
+            <p class="work-company">
+              <a href="https://mentorled.com/" target="_blank" rel="noopener noreferrer">Mentorled</a>
+              &mdash; UK (Remote)
+            </p>
+          </div>
+          <span class="work-date">Jan 2024 – Jun 2024</span>
+        </div>
+        <div class="work-scenario">
+          <div class="scenario-block">
+            <span class="scenario-label">The Challenge</span>
+            <p>
+              Build an AI-powered slide deck generator from zero — with a
+              cross-functional team to lead, no existing codebase, and a tight
+              timeline. The goal: turn plain text into structured,
+              presentation-ready slides using NLP.
+            </p>
+          </div>
+          <div class="scenario-block">
+            <span class="scenario-label">What I Built</span>
+            <ul class="work-list">
+              <li>
+                <strong>AI Slide Generation Engine</strong> — Used NLTK to process
+                raw text input and automatically generate structured slide decks.
+              </li>
+              <li>
+                <strong>Authentication System</strong> — Built user sign-up,
+                login, and Google OAuth flows from the ground up.
+              </li>
+              <li>
+                <strong>Full API Layer</strong> — Designed and built all REST
+                endpoints powering the application.
+              </li>
+              <li>
+                <strong>Infrastructure Setup</strong> — Configured PostgreSQL,
+                deployed to Vercel (frontend) and Railway (backend server).
+              </li>
+              <li>
+                <strong>Team Leadership</strong> — Managed progress across
+                designers, frontend, and backend engineers — keeping momentum
+                and morale high through the entire project timeline.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="work-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Django</span>
+          <span class="tag">NLTK</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Google OAuth</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Railway</span>
+        </div>
+      </div>
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -192,119 +436,221 @@
         onclick="location.href='./#projects'"
       />
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════════ -->
     <section id="projects">
-      <p class="section__text__p1">Chekout cool stuff I've built</p>
-      <h1 class="title">Zlide Project</h1>
+      <p class="section__text__p1">Things I've Shipped</p>
+      <h1 class="title">Projects</h1>
+
       <div class="experience-details-container">
-        <!-- <div class="about-containers"> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <a href="http://zlide-team-2.vercel.app/" target="_blank" rel="noopener noreferrer">
-                <img
-                src="./assets/zlide.png"
-                alt="Project 1"
-                class="project-img"
-                />
-              </a>
-              <div class="btn-container overlay-btn">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://zlide-team-2.vercel.app/'" target="_blank"
-                >
-                  Live Demo
-                </button>
-              </div>
+        <h2 class="project-section-title">Zlide — AI Slide Deck Generator</h2>
+        <p class="project-description">
+          Led a cross-functional team to build a web app that uses NLP to turn
+          plain text into structured slide presentations. Built the generation
+          logic, authentication, and all API endpoints.
+        </p>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="http://zlide-team-2.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/zlide.png" alt="Zlide Project" class="project-img" />
+            </a>
+            <div class="btn-container overlay-btn">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://zlide-team-2.vercel.app/'"
+                target="_blank"
+              >
+                Live Demo
+              </button>
             </div>
           </div>
-      </div>
-        
-      <div class="experience-details-container">
-        <h1 class="title">PayBox360 CRM</h1>
-          <!-- <div class="about-containers"> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-                <a href="https://liberty-paybox-dashboard-crm.vercel.app/login" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="./assets/paybox360_crm.png"
-                      alt="PayBox360"
-                      class="project-img"
-                    />
-                </a>
-                <div class="btn-container overlay-btn">
-                  <button
-                    class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://www.home.paybox360.com/'" target='_blank'
-                  >
-                    Live Demo
-                  </button>
-                </div>
-            </div>
-          </div>
-      </div>
-      
-      <div class="experience-details-container">
-        <h1 class="title">Winwise Admin Dashboard Optimization</h1>
-          <!-- <div class="about-containers"> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-                <a href="https://www.wisewinn.com/" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="./assets/wisewinn.png"
-                      alt="Winwise Betting Platform"
-                      class="project-img"
-                    />
-                </a>
-                <div class="btn-container overlay-btn">
-                  <button
-                    class="btn btn-color-2 project-btn-two"
-                    onclick="location.href='https://www.wisewinn.com/'" target='_blank'
-                  >
-                    Live Demo
-                  </button>
-                </div>
-            </div>
-          </div>
-      </div>
-      
-      <div class="experience-details-container">
-        <h1 class="title">Seeds and Pennies Loans Integration</h1>
-          <!-- <div class="about-containers"> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-                <a href="https://www.seedsandpennies.com/" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="./assets/seedsandpennies.png"
-                      alt="Seeds and Pennies"
-                      class="project-img"
-                    />
-                </a>
-                <div class="btn-container overlay-btn">
-                  <button
-                    class="btn btn-color-2 project-btn-two"
-                    onclick="location.href='https://www.seedsandpennies.com/'" target='_blank'
-                  >
-                    Live Demo
-                  </button>
-                </div>
-            </div>
-          </div>
+        </div>
       </div>
 
       <div class="experience-details-container">
-        <h1 class="title">Customer Process Automation with n8n</h1>
-          <!-- <div class="about-containers"> -->
-          <div class="details-container color-container">
-            <div class="article-container">
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="./assets/loan_disk_automation.png"
-                      alt="Project 1"
-                      class="project-img"
-                    />
-                </a>
+        <h2 class="project-section-title">PayBox360 CRM</h2>
+        <p class="project-description">
+          Engineered the CRM feature for Liberty Assured's fintech platform —
+          lead pipelines, stage management, and a round-robin meeting scheduler
+          integrating Zoom, Google Calendar, and Calendly.
+        </p>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="https://liberty-paybox-dashboard-crm.vercel.app/login" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/paybox360_crm.png" alt="PayBox360 CRM" class="project-img" />
+            </a>
+            <div class="btn-container overlay-btn">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.home.paybox360.com/'"
+                target="_blank"
+              >
+                Live Demo
+              </button>
             </div>
           </div>
+        </div>
       </div>
+
+      <div class="experience-details-container">
+        <h2 class="project-section-title">WinWinn Dashboard — 99% Performance Optimisation</h2>
+        <p class="project-description">
+          Diagnosed and resolved severe load time issues on a lotto admin
+          dashboard. Implemented database indexing, Redis caching, and Celery
+          async task scheduling — cutting load times by 99%.
+        </p>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="https://www.wisewinn.com/" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/wisewinn.png" alt="WinWinn Betting Platform" class="project-img" />
+            </a>
+            <div class="btn-container overlay-btn">
+              <button
+                class="btn btn-color-2 project-btn-two"
+                onclick="location.href='https://www.wisewinn.com/'"
+                target="_blank"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-details-container">
+        <h2 class="project-section-title">Seeds &amp; Pennies — Loan Default Integration</h2>
+        <p class="project-description">
+          Integrated third-party APIs to automatically detect and flag loan
+          defaulters, removing manual monitoring and improving operational
+          response time.
+        </p>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="https://www.seedsandpennies.com/" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/seedsandpennies.png" alt="Seeds and Pennies" class="project-img" />
+            </a>
+            <div class="btn-container overlay-btn">
+              <button
+                class="btn btn-color-2 project-btn-two"
+                onclick="location.href='https://www.seedsandpennies.com/'"
+                target="_blank"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-details-container">
+        <h2 class="project-section-title">Customer Process Automation — n8n</h2>
+        <p class="project-description">
+          Built backend endpoints to power n8n and Freshchat automation
+          workflows, streamlining customer service operations across the company.
+        </p>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./assets/loan_disk_automation.png"
+                alt="n8n Process Automation"
+                class="project-img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#recommendations'"
+      />
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         RECOMMENDATIONS
+    ═══════════════════════════════════════════ -->
+    <section id="recommendations">
+      <p class="section__text__p1">What Colleagues Say</p>
+      <h1 class="title">Recommendations</h1>
+
+      <div class="recommendations-grid">
+
+        <div class="recommendation-card">
+          <div class="quote-mark">&#8220;</div>
+          <p class="quote-text">
+            I had the pleasure of working with Ini during his time at our
+            organization, and I can confidently say he is a capable and dependable
+            software engineer. As a backend developer, he consistently demonstrated
+            strong problem-solving skills and a commitment to building reliable,
+            high-performance systems using Python and Django. He approaches
+            technical challenges with analytical thinking and a strong focus on
+            delivering practical, scalable solutions. Beyond his technical skills,
+            Ini is collaborative, proactive, and communicates effectively with both
+            technical and non-technical stakeholders. I would highly recommend him
+            to any team looking for a backend developer who takes ownership and is
+            committed to building systems that deliver real value.
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">AD</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Adenike Danmole</p>
+              <p class="reviewer-title">MSc, PMP, OCP, CSM, SSM &middot; Technology &amp; IT Solutions Leader</p>
+              <p class="reviewer-rel">Managed Ini-ubong directly &middot; March 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="recommendation-card">
+          <div class="quote-mark">&#8220;</div>
+          <p class="quote-text">
+            Ini-ubong is such a honest, dedicated and knowledge-seeking person.
+            He is easy to work with and very reliable. An intelligent and innovative
+            developer, his leadership skills are commendable. You can trust Ini to
+            lead a team and sleep with your two eyes closed. Absolutely recommend him!
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">AA</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Adeola Awodire</p>
+              <p class="reviewer-title">Streamlining Operations &amp; Managing Projects for Growth &amp; Expansion</p>
+              <p class="reviewer-rel">Managed Ini-ubong directly &middot; September 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="recommendation-card">
+          <div class="quote-mark">&#8220;</div>
+          <p class="quote-text">
+            I had the pleasure of working with Ini during our time together, and
+            I can confidently say he is an exceptional software engineer. Ini
+            consistently demonstrated deep curiosity and a genuine desire to
+            understand not just how things work, but why they work that way. That
+            mindset translated into thoughtful solutions, clean implementations,
+            and continuous improvement in everything he touched. What stood out most
+            was his relentless work ethic — whether it was debugging tough issues,
+            optimizing performance, or delivering new features, he approached every
+            task with focus and determination. Beyond his technical strength, Ini
+            performed excellently in execution, delivering reliable, high-quality
+            results while maintaining professionalism and collaboration within the
+            team. He will be a valuable asset wherever he goes.
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">DU</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Daniel Ugah</p>
+              <p class="reviewer-title">Senior Software Engineer &middot; Python | Django | FastAPI | AWS | Rust</p>
+              <p class="reviewer-rel">Managed Ini-ubong directly &middot; February 2026</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -312,6 +658,10 @@
         onclick="location.href='./#contact'"
       />
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
     <section id="contact">
       <p class="section__text__p1">Got a project?</p>
       <h1 class="title">Hit me up</h1>
@@ -334,19 +684,23 @@
         </div>
       </div>
     </section>
+
     <footer>
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Technologies</a></li>
+            <li><a href="#experience">Tech Stack</a></li>
+            <li><a href="#work">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#recommendations">Reviews</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <p>Copyright &#169; <span id="year"></span> Ini-ubong Isemin. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
